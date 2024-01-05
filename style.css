@@ -4,7 +4,33 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: contain;
+  margin: 0px;
 }
 .p-color {
   color: blue;
+}
+h1 {
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  background-color: none;
+  padding: 0;
+  margin: 0px;
+  overflow: hidden;
+}
+.navbar a {
+  color: antiquewhite;
+  text-decoration: none;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+}
+.navbar a:hover {
+  background-color: rgb(104, 85, 85);
+}
+
+.navbar li {
+  float: inline-start;
 }
