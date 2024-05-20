@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Appointment Confirmation</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+    <style>
+        p {
+            display: block;
+            font-size: 1.1em;
+        }
+        body {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Appointment Confirmation</h2>
+
+    <h1>Estimated Day of Appointment</h1>
+    <p>{{ day }}</p>
+
+    <h1>Estimated Time of Appointment</h1>
+    <p>{{ time }}</p>
+
+    <h1>Estimated Cost of Appointment</h1>
+    <p>${{ total_price }}</p>
+
+    <h1>Employee Name</h1>
+    <p>{{ hairdresser }}</p>
+
+    <h1>Selected Services</h1>
+    <ul>
+        {% for service in selected_services %}
+            <li>{{ service }}</li>
+        {% endfor %}
+    </ul>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

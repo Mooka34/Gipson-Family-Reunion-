@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Appointment Form</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <style>
+    body {
+        background-image: url(https://media.timeout.com/images/100503697/1536/864/image.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 0px;
+    }
+
+    p.error {
+        color: red;
+    }
+
+    label {
+        font-size: 1.2em;
+        padding-top: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Book an Appointment</h2>
+  <form action="/submit_appointment" method="post">
+    <label for="day">Select Day:</label><br>
+    <select id="day" name="day">
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+
+    <label for="time">Select Time:</label><br>
+    <select id="time" name="time">
+      <!-- Times for other days -->
+      <option value="9:00 am">9:00 am</option>
+      <option value="10:00 am">10:00 am</option>
+      <option value="11:00 am">11:00 am</option>
+      <option value="12:00 pm">12:00 pm</option>
+      <option value="1:00 pm">1:00 pm</option>
+      <option value="2:00 pm">2:00 pm</option>
+      <option value="3:00 pm">3:00 pm</option>
+      <option value="4:00 pm">4:00 pm</option>
+      <option value="5:00 pm">5:00 pm</option>
+      <option value="6:00 pm">6:00 pm</option>
+    </select>
+
+    <label for="hairdresser">Select Hairdresser:</label><br>
+    <select id="hairdresser" name="hairdresser">
+      <option value="Jamil">Jamil</option>
+      <option value="Cherish">Cherish</option>
+      <option value="Shanice">Shanice</option>
+      <option value="Arrinana">Arrinana</option>
+    </select>
+
+    <label for="services">Select Service(s):</label><br>
+    <input type="text" id="services" name="services" placeholder="Enter service(s) separated by commas"><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
